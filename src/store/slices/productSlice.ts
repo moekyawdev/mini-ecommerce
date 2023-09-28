@@ -8,6 +8,8 @@ const initialState: ProductSlice = {
   error: null,
 };
 
+//Create asynsthunk Function
+
 export const fetchProducts = createAsyncThunk(
   "product/fetchProducts",
   async (_, thunkApi) => {

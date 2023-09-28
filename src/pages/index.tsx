@@ -7,12 +7,16 @@ import { Box } from "@mui/material";
 import { useEffect } from "react";
 
 export default function Home() {
+  //Dispatch from dataBase
+
   const dispatch = useAppDispatch();
   const products = useAppSelector((state) => state.products.items);
 
   useEffect(() => {
     dispatch(fetchProducts());
   }, []);
+
+  //Adding MUI Card
 
   return (
     <Box
